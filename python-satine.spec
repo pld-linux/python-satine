@@ -1,5 +1,5 @@
 %include        /usr/lib/rpm/macros.python
-%define		module Satine
+%define		module satine
 %define		_beta beta-1
 Summary:	Satine - XML data binding for Python
 Summary(pl):	Satine - obs³uga danych XML dla Pythona
@@ -9,7 +9,7 @@ Release:	0.beta.1
 License:	GPL
 Group:		Libraries/Python
 # Source0-md5:	18a153cc9ed3cd45416d8461911029a2
-Source0:	http://dl.sourceforge.net/satine/%{module}-%{version}_%{_beta}.zip
+Source0:	http://dl.sourceforge.net/satine/Satine-%{version}_%{_beta}.zip
 URL:		http://satine.sourceforge.net/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
@@ -40,7 +40,7 @@ atrybutami (xlist). Technologia ta pozwala na:
   oprogramowana w C.
 
 %prep
-%setup -q -n %{module}-%{version}_%{_beta}
+%setup -q -n Satine-%{version}_%{_beta}
 
 %build
 #python config_unix.py \
@@ -51,22 +51,28 @@ python setup.py build
 %install
 rm -rf $RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_examplesdir}
+
 python setup.py install \
 	--optimize=2 \
 	--root $RPM_BUILD_ROOT
 
+mv examples $RPM_BUILD_ROOT%{_examplesdir}/%name
+	
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGE doc/* examples
-%dir %{py_sitedir}/satine
+%doc CHANGE doc/*
+%dir %{py_sitedir}/%{module}
 %attr(755,root,root) %{py_sitedir}/satine/*.so
-%{py_sitedir}/satine/*.py[co]
-%dir %{py_sitedir}/satine/test
-%{py_sitedir}/satine/test/*.py[co]
-%dir %{py_sitedir}/satine/schemas
-%{py_sitedir}/satine/schemas/*.py[co]
-%dir %{py_sitedir}/satine/grapes
-%{py_sitedir}/satine/grapes/*.py[co]
+%{py_sitedir}/%{module}/*.py[co]
+%dir %{py_sitedir}/%{module}/test
+%{py_sitedir}/%{module}/test/*.py[co]
+%dir %{py_sitedir}/%{module}/schemas
+%{py_sitedir}/%{module}/schemas/*.py[co]
+%dir %{py_sitedir}/%{module}/grapes
+%{py_sitedir}/%{module}/grapes/*.py[co]
+%dir %{_examplesdir}/%name
+%{_examplesdir}/%name/*
