@@ -1,9 +1,8 @@
-# TODO: descriptions
 %include        /usr/lib/rpm/macros.python
 %define		module Satine
 %define		_beta beta-1
-Summary:	A Python module
-Summary(pl):	Modu³ pythona
+Summary:	Satine - XML data binding for Python
+Summary(pl):	Satine - obs³uga danych XML dla Pythona
 Name:		python-%{module}
 Version:	1.0
 Release:	0.beta.1
@@ -18,8 +17,27 @@ Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Satine is a Python library that makes XML management easy and
+complete. Satine converts XML documents to Python lists with
+attributes (xlist). This technology allows to:
+- translate documents with namespaces, both in elements and attributes
+- translate both documents without XMLSchema and documents with it. If
+  the XMLSchema is available, the document can be easily validated.
+- random and partial access to XML documents
+- work very fast. The data binding technology is coded in C.
 
 %description -l pl
+Satine to biblioteka Pythona czyni±ca zarz±dzanie XML-em ³atwym i
+pe³nym. Satine konwertuje dokumenty XML na pythonowe listy z
+atrybutami (xlist). Technologia ta pozwala na:
+- t³umaczenie dokumentów z przestrzeniami nazw, zarówno w elementach
+  jak i atrybutach
+- t³umaczenie dokumentów zarówno bez XMLSchema jak i z. Je¶li
+  XMLSchema jest dostêpny, dokument mo¿e byæ ³atwo sprawdzony pod
+  k±tem poprawno¶ci.
+- swobodny i czê¶ciowy dostêp do dokumentów XML
+- bardzo szybkie dzia³anie. Technologia obs³ugi danych jest
+  oprogramowana w C.
 
 %prep
 %setup -q -n %{module}-%{version}_%{_beta}
@@ -33,7 +51,9 @@ python setup.py build
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install --optimize=2 --root $RPM_BUILD_ROOT
+python setup.py install \
+	--optimize=2 \
+	--root $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
