@@ -4,7 +4,7 @@ Summary:	Satine - XML data binding for Python
 Summary(pl):	Satine - obs³uga danych XML dla Pythona
 Name:		python-%{module}
 Version:	1.0
-Release:	0.beta.3
+Release:	0.beta.4
 License:	GPL
 Group:		Libraries/Python
 # Source0-md5:	18a153cc9ed3cd45416d8461911029a2
@@ -13,7 +13,7 @@ URL:		http://satine.sourceforge.net/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	unzip
-Requires:	python-modules
+%pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
