@@ -12,6 +12,7 @@ Source0:	http://dl.sourceforge.net/satine/Satine-%{version}_%{_beta}.zip
 URL:		http://satine.sourceforge.net/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
+BuildRequires:	unzip
 Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
