@@ -9,7 +9,7 @@ Release:	0.beta.1
 License:	GPL
 Group:		Libraries/Python
 # Source0-md5:	18a153cc9ed3cd45416d8461911029a2
-Source0:	http://prdownloads.sourceforge.net/satine/%{module}-%{version}_%{_beta}.zip
+Source0:	http://dl.sourceforge.net/satine/%{module}-%{version}_%{_beta}.zip
 URL:		http://satine.sourceforge.net/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
