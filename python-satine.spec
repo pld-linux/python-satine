@@ -43,3 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitedir}/satine
 %attr(755,root,root) %{py_sitedir}/satine/*.so
 %{py_sitedir}/satine/*.py[co]
+%{py_sitedir}/satine/test/*.py[co]
+%{py_sitedir}/satine/schemas/*.py[co]
+%{py_sitedir}/satine/grapes/*.py[co]
