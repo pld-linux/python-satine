@@ -20,24 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description -l pl
 
-%package devel
-Summary:	development files
-Summary(pl):	Pliki programistyczne
-Group:		Development/Languages/Python
-Requires:	%{name} = %{version}
-Requires:	libogg-devel
-Obsoletes:	pyogg-devel
-
-%description devel
-
-%description devel -l pl
-
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{version}_%{_beta}
 
 %build
-python config_unix.py \
-	--prefix %{_prefix}
+#python config_unix.py \
+#	--prefix %{_prefix}
 python setup.py config
 python setup.py build
 
@@ -51,12 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README NEWS
-%dir %{py_sitedir}/ogg
-%attr(755,root,root) %{py_sitedir}/ogg/*.so
-%{py_sitedir}/ogg/*.py[co]
-
-%files devel
-%defattr(644,root,root,755)
-%doc test/*
-%{py_incdir}/%{module}
+%doc CHANGE doc/* examples/*
+%dir %{py_sitedir}/satine
+%attr(755,root,root) %{py_sitedir}/satine/*.so
+%{py_sitedir}/satine/*.py[co]
