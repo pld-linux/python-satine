@@ -1,3 +1,4 @@
+# TODO: descriptions
 %include        /usr/lib/rpm/macros.python
 %define		module Satine
 %define		_beta beta-1
@@ -43,6 +44,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitedir}/satine
 %attr(755,root,root) %{py_sitedir}/satine/*.so
 %{py_sitedir}/satine/*.py[co]
+%dir %{py_sitedir}/satine/test
 %{py_sitedir}/satine/test/*.py[co]
+%dir %{py_sitedir}/satine/schemas
 %{py_sitedir}/satine/schemas/*.py[co]
+%dir %{py_sitedir}/satine/grapes
 %{py_sitedir}/satine/grapes/*.py[co]
