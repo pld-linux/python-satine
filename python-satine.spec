@@ -1,6 +1,6 @@
 %include        /usr/lib/rpm/macros.python
-%define		module satine
-%define		_beta beta-1
+%define		module	satine
+%define		_beta	beta-1
 Summary:	Satine - XML data binding for Python
 Summary(pl):	Satine - obs³uga danych XML dla Pythona
 Name:		python-%{module}
