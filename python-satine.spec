@@ -39,7 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGE doc/* examples/*
+%doc CHANGE doc/* examples
 %dir %{py_sitedir}/satine
 %attr(755,root,root) %{py_sitedir}/satine/*.so
 %{py_sitedir}/satine/*.py[co]
