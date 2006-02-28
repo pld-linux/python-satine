@@ -4,11 +4,11 @@ Summary:	Satine - XML data binding for Python
 Summary(pl):	Satine - obs³uga danych XML dla Pythona
 Name:		python-%{module}
 Version:	1.0
-Release:	0.beta.4
+Release:	0.beta1.4
 License:	GPL
 Group:		Libraries/Python
-# Source0-md5:	18a153cc9ed3cd45416d8461911029a2
 Source0:	http://dl.sourceforge.net/satine/Satine-%{version}_%{_beta}.zip
+# Source0-md5:	18a153cc9ed3cd45416d8461911029a2
 URL:		http://satine.sourceforge.net/
 BuildRequires:	python-devel
 BuildRequires:	unzip
@@ -56,8 +56,8 @@ python setup.py install \
 	--optimize=2 \
 	--root $RPM_BUILD_ROOT
 
-mv examples $RPM_BUILD_ROOT%{_examplesdir}/%name
-	
+mv examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -73,5 +73,5 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/%{module}/schemas/*.py[co]
 %dir %{py_sitedir}/%{module}/grapes
 %{py_sitedir}/%{module}/grapes/*.py[co]
-%dir %{_examplesdir}/%name
-%{_examplesdir}/%name/*
+%dir %{_examplesdir}/%{name}
+%{_examplesdir}/%{name}/*
