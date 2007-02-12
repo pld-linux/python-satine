@@ -1,7 +1,7 @@
 %define		module	satine
 %define		_beta	beta-1
 Summary:	Satine - XML data binding for Python
-Summary(pl):	Satine - obs³uga danych XML dla Pythona
+Summary(pl.UTF-8):   Satine - obsÅ‚uga danych XML dla Pythona
 Name:		python-%{module}
 Version:	1.0
 Release:	0.beta1.4
@@ -25,17 +25,17 @@ attributes (xlist). This technology allows to:
 - random and partial access to XML documents
 - work very fast. The data binding technology is coded in C.
 
-%description -l pl
-Satine to biblioteka Pythona czyni±ca zarz±dzanie XML-em ³atwym i
-pe³nym. Satine konwertuje dokumenty XML na pythonowe listy z
+%description -l pl.UTF-8
+Satine to biblioteka Pythona czyniÄ…ca zarzÄ…dzanie XML-em Å‚atwym i
+peÅ‚nym. Satine konwertuje dokumenty XML na pythonowe listy z
 atrybutami (xlist). Technologia ta pozwala na:
-- t³umaczenie dokumentów z przestrzeniami nazw, zarówno w elementach
+- tÅ‚umaczenie dokumentÃ³w z przestrzeniami nazw, zarÃ³wno w elementach
   jak i atrybutach
-- t³umaczenie dokumentów zarówno bez XMLSchema jak i z. Je¶li
-  XMLSchema jest dostêpny, dokument mo¿e byæ ³atwo sprawdzony pod
-  k±tem poprawno¶ci.
-- swobodny i czê¶ciowy dostêp do dokumentów XML
-- bardzo szybkie dzia³anie. Technologia obs³ugi danych jest
+- tÅ‚umaczenie dokumentÃ³w zarÃ³wno bez XMLSchema jak i z. JeÅ›li
+  XMLSchema jest dostÄ™pny, dokument moÅ¼e byÄ‡ Å‚atwo sprawdzony pod
+  kÄ…tem poprawnoÅ›ci.
+- swobodny i czÄ™Å›ciowy dostÄ™p do dokumentÃ³w XML
+- bardzo szybkie dziaÅ‚anie. Technologia obsÅ‚ugi danych jest
   oprogramowana w C.
 
 %prep
