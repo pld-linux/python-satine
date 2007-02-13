@@ -1,7 +1,7 @@
 %define		module	satine
 %define		_beta	beta-1
 Summary:	Satine - XML data binding for Python
-Summary(pl.UTF-8):   Satine - obsługa danych XML dla Pythona
+Summary(pl.UTF-8):	Satine - obsługa danych XML dla Pythona
 Name:		python-%{module}
 Version:	1.0
 Release:	0.beta1.4
