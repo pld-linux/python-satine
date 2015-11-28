@@ -45,15 +45,14 @@ atrybutami (xlist). Technologia ta pozwala na:
 #python config_unix.py \
 #	--prefix %{_prefix}
 python setup.py config
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}
 
-python setup.py install \
-	--optimize=2 \
+%py_install \
 	--root $RPM_BUILD_ROOT
 
 mv examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}
