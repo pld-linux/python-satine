@@ -10,6 +10,7 @@ Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/satine/Satine-%{version}_%{_beta}.zip
 # Source0-md5:	18a153cc9ed3cd45416d8461911029a2
 URL:		http://satine.sourceforge.net/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-devel
 BuildRequires:	unzip
 %pyrequires_eq	python-modules
